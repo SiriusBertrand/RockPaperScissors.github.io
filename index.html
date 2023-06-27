@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" type="text/css" href="RPS.css" />
+    <title>Rock Paper Scissors Game</title>
     <link
       rel="stylesheet"
+      type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="RPS.css" />
   </head>
   <body>
-    <div id="container">
-      <h1>Rock Paper Scissors: The Game</h1>
-      <div id="game-container">
-        <div id="choices-container">
-          <div class="choice-container">
-            <div class="icon-circle">
-              <button id="rock"><i class="fas fa-hand-rock"></i></button>
-            </div>
-            <p>Rock</p>
-          </div>
-          <div class="choice-container">
-            <div class="icon-circle">
-              <button id="paper"><i class="fas fa-hand-paper"></i></button>
-            </div>
-            <p>Paper</p>
-          </div>
-          <div class="choice-container">
-            <div class="icon-circle">
-              <button id="scissors">
-                <i class="fas fa-hand-scissors"></i>
-              </button>
-            </div>
-            <p>Scissors</p>
-          </div>
+    <h1>Rock Paper Scissors</h1>
+    <div class="icons-container">
+      <div class="icon-container">
+        <div class="icon" onclick="playGame('rock')">
+          <i class="fas fa-hand-rock"></i>
         </div>
-        <div id="result-container">
-          <div id="score-box">
-            <p id="user-score">User: 0</p>
-            <p id="computer-score">Computer: 0</p>
-          </div>
-          <div id="choice-box">
-            <p id="player-choice">Player chose:</p>
-            <p id="computer-choice">Computer chose:</p>
-          </div>
-          <p id="game-result"></p>
+      </div>
+      <div class="icon-container">
+        <div class="icon" onclick="playGame('paper')">
+          <i class="fas fa-hand-paper"></i>
         </div>
-        <button id="play-again">Play Again</button>
+      </div>
+      <div class="icon-container">
+        <div class="icon" onclick="playGame('scissors')">
+          <i class="fas fa-hand-scissors"></i>
+        </div>
       </div>
     </div>
 
-    <div id="message-box"></div>
+    <div class="result-boxes">
+      <div class="player-choice-box">
+        <h3>Player's Choice:</h3>
+        <p id="player-choice"></p>
+      </div>
+      <div class="computer-choice-box">
+        <h3>Computer's Choice:</h3>
+        <p id="computer-choice"></p>
+      </div>
+    </div>
+
+    <div id="round-result"></div>
+    <div id="end-game"></div>
+
+    <div class="scoreboard-box">
+      <h2>Scoreboard</h2>
+      <div class="scoreboard">
+        <p class="score player-score">Player: 0</p>
+        <p class="score computer-score">Computer: 0</p>
+      </div>
+    </div>
 
     <script src="RPS.js"></script>
   </body>
